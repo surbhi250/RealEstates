@@ -1,0 +1,59 @@
+﻿@model RealEstates.Models.Property
+
+@{ ViewData["Title"] = "Property"; }
+
+<br />
+<div>
+    <h4>Property</h4>
+    <hr />
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.TypeOfProperty)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dimentions)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.State)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PinCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rate)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.TypeOfProperty)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Dimentions)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.State)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.PinCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Rate)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" type="button" class="btn btn-info">Edit</a>
+    <a asp-action="Index" type="button" class="btn btn-info">Back to List</a>
+</div>
